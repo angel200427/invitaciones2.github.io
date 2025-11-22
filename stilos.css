@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #fff6ec, #ffe2cf);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* -------- TARJETA -------- */
+.card {
+  width: 90%;
+  max-width: 380px;
+  background: #ffffffdd;
+  padding: 20px;
+  border-radius: 22px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 30px #00000020;
+  position: relative;
+  z-index: 2;
+}
+
+.marco-foto {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 6px solid #ffd4a8;
+  padding: 6px;
+  margin: 0 auto 15px;
+  background: radial-gradient(#fff, #ffe5d0);
+  box-shadow: 0 8px 20px #0000002a;
+}
+
+.foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.titulo {
+  margin-top: 10px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #b86b27;
+}
+
+.texto {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.info {
+  background: #fff7ec;
+  padding: 12px;
+  border-radius: 15px;
+  margin-top: 15px;
+  box-shadow: 0 6px 16px #00000015;
+}
+
+.boton {
+  margin-top: 20px;
+  padding: 12px 18px;
+  font-size: 16px;
+  background: #ff8e37;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.boton:hover {
+  background: #ff7a00;
+  transform: scale(1.05);
+}
+
+/* -------- ANIMACIONES -------- */
+.fade-in { animation: fade 1.2s ease; }
+.slide-up { animation: slideUp 1.2s ease; }
+.bounce { animation: bounceIn 1.2s ease; }
+.pulse { animation: pulse 2s infinite; }
+.shimmer { animation: shine 3s infinite; }
+.spin-soft { animation: softSpin 14s infinite linear; }
+
+@keyframes fade { from {opacity:0;} to {opacity:1;} }
+@keyframes slideUp { from {transform:translateY(25px);opacity:0;} to {transform:translateY(0);opacity:1;} }
+@keyframes bounceIn { 0%{transform:scale(.7);}60%{transform:scale(1.05);}100%{transform:scale(1);} }
+@keyframes pulse { 0%{transform:scale(1);}50%{transform:scale(1.04);}100%{transform:scale(1);} }
+@keyframes shine { 0%{opacity:.7;}50%{opacity:1;}100%{opacity:.7;} }
+@keyframes softSpin { from{transform:rotate(0);} to{transform:rotate(360deg);} }
+
+/* -------- FLORES -------- */
+#flores {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.flor {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  animation: caer 6s linear infinite;
+  transform-origin: center;
+}
+
+/* pétalos hechos con CSS */
+.flor::before,
+.flor::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 18px;
+  background: inherit;
+  border-radius: 50%;
+}
+
+/* pétalos extra */
+.flor div {
+  position: absolute;
+  width: 12px;
+  height: 18px;
+  background: inherit;
+  border-radius: 50%;
+}
+
+/* posiciones de pétalos para formar una flor */
+.flor::before { top: -4px; left: 8px; }
+.flor::after { bottom: -4px; left: 8px; }
+
+.flor div:nth-child(1) { left: -2px; top: 6px; }
+.flor div:nth-child(2) { right: -2px; top: 6px; }
+
+@keyframes caer {
+  0% { transform: translateY(-60px) rotate(0deg); }
+  100% { transform: translateY(105vh) rotate(360deg); }
+}

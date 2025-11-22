@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitación a la Novena</title>
+  <link rel="stylesheet" href="stilos.css" />
+</head>
+<body>
+
+  <!-- Música: se activa cuando el usuario toca la pantalla -->
+ <audio autoplay loop>
+  <source src="audio/musica-navidad.mp4" type="audio/mp3">
+</audio>
+
+
+  <div class="card fade-in">
+    <div class="marco-foto spin-soft">
+      <img src="img/Imagen de WhatsApp 2025-11-21 a las 22.18.28_1557002f.jpg" class="foto" alt="" />
+    </div>
+
+    <h1 class="titulo shimmer">Invitación a la Novena del Niño de Caracol</h1>
+
+    <p class="texto slide-up">
+      Querida familia: Vargas Cobeña, Parraga Vargas, Rosero Vargas. <br><br>
+      Con mucho cariño los invitamos a compartir juntos esta novena llena de fe, unión y agradecimiento.
+    </p>
+
+    <div class="info bounce">
+      <p><strong>📅 Fecha:</strong> 15 de diciembre</p>
+      <p><strong>⏰ Hora:</strong> 19:00 PM</p>
+      <p><strong>📍 Dirección:</strong> León Garcés vía a la Curtiduría</p>
+    </div>
+
+    <p>Seguros de contar con su precencia,</p>
+    <p>El "Niño de Caracol" los bendiga</p>
+    <p>GRACIAS</p>
+
+    <button class="boton pulse" onclick="confirmarAsistencia()">
+      Confirmar asistencia
+    </button>
+  </div>
+
+  <!-- Flores animadas -->
+  <div id="flores"></div>
+
+  
+  <script src="scrip.js"></script>
+</body>
+</html>
